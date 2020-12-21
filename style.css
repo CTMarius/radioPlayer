@@ -1,0 +1,14 @@
+.info-current-song {
+    font-family: 'Share', sans-serif;
+    text-align: center;
+}
+
+.info-current-song h2 {
+    font-size: 22px;
+    font-weight: 700;
+}
+
+.info-current-song h3 {
+    font-size: 18px;
+    font-weight: 400;
+}
