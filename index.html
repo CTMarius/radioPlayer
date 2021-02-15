@@ -1,15 +1,99 @@
-<head>  
-    <title>Radio Player</title>	    
-	<link rel="stylesheet" type="text/css" href="style.css">	
-	<script src="script.js"></script>
-  </head>
-<div>  
-<audio controls autoplay preload="metadata" style=" width:300px;">
-	<source src="http://2b062483747d.ngrok.io/stream" type="audio/mpeg">
-	Your browser does not support the audio element.
+<!DOCTYPE html>
+<html>
+<head>
+<title>Radio Player</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<script src="script.js"></script>
+</head>
+<body id="body">
+<div class="player" id="player">
+<audio controls autoplay preload="metadata" style=" width:300px; position:fixed; bottom:0; margin-bottom: 5px;">
+<source src="https://668dee490f14.ngrok.io/stream" type="audio/mpeg">
+Your browser does not support the audio element.
 </audio>
 </div>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+<script>
+	var timedelay = 1;
+	function delayCheck()
+	{
+	   if(timedelay == 5)
+	   {
+		   $('#player').fadeOut();
+		   timedelay = 1;
+	   }
+	   timedelay = timedelay+1;
+	}
+	$(document).mousemove(function() {
+		$('#player').fadeIn(); 
+		timedelay = 1;
+		clearInterval(_delay); 
+		_delay = setInterval(delayCheck, 3000);
+	});
+	_delay = setInterval(delayCheck, 500);
+</script>
 <div class="info-current-song">
-	<h2 id="currentSong" class="current-song text-uppercase">...</h2>
-	<h3 id="currentArtist" class="current-artist text-captalize">...</h3>
+<h2 id="currentSong" class="info-current-song"></h2>
 </div>
+<div id="lowerleft"> <div id="innertext">About</div>
+</div>
+<div id="myModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<div><h3 id="title">Wellcome to Old Polder Radio</h3></div>
+<div id="artists"><h4>Artists:</h4></div>
+<div><strong>Sieur Bigorneau - </strong><a href="https://sieurbigorneau.bandcamp.com/">https://sieurbigorneau.bandcamp.com/</a></div>
+<div><strong>Reverboy </strong><a href="https://reverboy.bandcamp.com/">https://reverboy.bandcamp.com/</a></div>
+<div><strong>Montplaisir/Komiku - </strong><a href="https://chezmonplaisir.bandcamp.com/">https://chezmonplaisir.bandcamp.com/</a></div>
+<div><strong>Nathan Maingard - </strong><a href="https://natemaingard.bandcamp.com/">https://natemaingard.bandcamp.com/</a></div>
+<div><strong>Townhouse Woods - </strong><a href="https://townhousewoods.bandcamp.com/">https://townhousewoods.bandcamp.com/</a></div>
+<div><strong>Goodbye Meteor - </strong><a href="https://goodbyemeteor.bandcamp.com/releases">https://goodbyemeteor.bandcamp.com/releases</a></div>
+<div><strong>Rosedale Bluesband - </strong><a href="https://frontl.ink/2knv6oe">https://frontl.ink/2knv6oe</a></div>
+<div><h4>Licensing:</h4></div>
+<div id="license">All the songs in this stream fall into the Creative Commons <a href="https://creativecommons.org/licenses/">license.</a></div>
+<div>Background photo credit: <a href="https://www.europeana.eu/">Europeana</a></div>
+<div><h4></h4></div>
+<div><strong>This station is using: </strong><a href="https://icecast.org/">Icecast 2.4.4</a> and <a href="https://icecast.org/ezstream/"> Ezstream 0.6.0</a></div>
+<div><h4></h4></div>
+<div id="contact"><strong>Contact email: </strong><a href="oldpolderradio@gmail.com"><span class="__cf_email__" data-cfemail="e38c8f87938c8f8786919182878a8ca3848e828a8fcd808c8e">[email&#160;protected]</span></a></div>
+<div><p id="currentListeners"></p></div>
+</div>
+</div>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+var modal = document.getElementById("myModal");
+var btn = document.getElementById("lowerleft");
+var span = document.getElementsByClassName("close")[0];
+btn.onclick = function() {
+  modal.style.display = "block";
+}
+span.onclick = function() {
+  modal.style.display = "none";
+}
+window.onclick = function(event) {
+  if (event.target == modal) {
+    modal.style.display = "none";
+  }
+}
+</script>
+<div id="lowerright"> <div id="innertext">History</div>
+</div>
+<div id="historyModal" class="modal">
+<div class="modal-content">
+<span class="close">&times;</span>
+<div><h3 id="title">Here's what you've listened to so far:</h3></div>
+<ul id="songlist" style="overflow-y: scroll"></ul>
+</div>
+</div>
+<script>
+var modal2 = document.getElementById("historyModal");
+var btn2 = document.getElementById("lowerright");
+var span2 = document.getElementsByClassName("close")[1];
+btn2.onclick = function() {
+  modal2.style.display = "block";
+}
+span2.onclick = function() {
+  modal2.style.display = "none";
+}
+</script>
+</body>
+</html>
