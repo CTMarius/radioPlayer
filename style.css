@@ -1,130 +1,47 @@
-body {
-    background: url("img/Pictures17.jpeg") no-repeat center center fixed; 
-    -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-   }
-   
-    #b1{background: url("img/Pictures0.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b2{background: url("img/Pictures1.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b3{background: url("img/Pictures2.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b4{background: url("img/Pictures3.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b5{background: url("img/Pictures4.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b6{background: url("img/Pictures5.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b7{background: url("img/Pictures6.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b8{background: url("img/Pictures7.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b9{background: url("img/Pictures8.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b10{background: url("img/Pictures9.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b11{background: url("img/Pictures10.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b12{background: url("img/Pictures11.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b13{background: url("img/Pictures12.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b14{background: url("img/Pictures13.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-    #b15{background: url("img/Pictures14.jpg")no-repeat center center fixed;
-        -webkit-background-size: cover;
-    -moz-background-size: cover;
-    -o-background-size: cover;
-    background-size: cover;
-    }
-
+.container{
+    position: fixed;
+    top: 50%;
+    left: 50%;  
+    transform: translate(-50%, -50%);  
+    width: 29.5em;
+    height: 7.6em;
+    border: 1px solid #eee;
+    box-shadow: 0 2px 2px #ccc;  
+    margin: 10px;  
+    padding: 20px;
+    display: inline-block; 
+    background-color:rgba(255,255,255,.8);
+    overflow: hidden;
+}
 .current-song h2 {
     font-size: 22px;
     font-weight: 700;
     text-align: center;
     width:100%;
-    height: 50px;
     background-color: rgb(59, 58, 58);
-    display: table-cell;    
-    border-radius: 50%;   
-    opacity: 0.5;    
+    opacity: 0.5; 
 }
 
-.player{
-    margin: auto;
-    width: 10%;
-    display: center;
+.player{  
+    z-index: 3;
+    width: 80%;
+    height: 190px;
+    margin-left: 50px;
+    margin-bottom: 25px;
+    padding: 15px;
+    padding-bottom:25px;
 }
 
-.info-current-song {
-    color: white;
+.info-current-song {   
+    margin-left: 20px;
+    margin-top:5px;      
     font-size: 10px;
-    font-family: "Raleway", Helvetica, Arial, sans-serif;
+    font-family:monospace;
     font-weight: 600;
     text-transform: uppercase;
-    text-align: center;
-    margin-left: 150px;
-    opacity: 1;
-    text-shadow: 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black, 0 0 4px black;  }
+    text-align: center;   
+    opacity: 1;      
+}
 
   @keyframes clock {
     0% {
@@ -146,51 +63,124 @@ body {
       opacity: 0;
     }
   }
-
-
-#lowerleft
-{
-    position:fixed;
-    bottom:0;
-    left:0;
-    margin-bottom: 1px;
-    margin-left : 1px;
-    height: 30px;
-    width: 80px;
-    background-color: rgb(59, 58, 58);
-    display: table-cell;   
-    opacity: 0.5; 
-    border-radius:10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
+#buttoncontainer
+{      
+   position: fixed;   
+   left: 0;
+   margin-top: 30px;   
+   margin-left: 420px;  
+   z-index: 2;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace;
+  
+}
+#about
+{      
+   position: fixed;   
+   left: 0;
+   margin-top: 30px;   
+   margin-left: 420px;  
+   z-index: 2;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace;
+  
+}
+#history
+{      
+   position: fixed;   
+   left: 0;
+   margin-top: 30px;   
+   margin-left: 338px;
+   z-index: 2;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace;  
 }
 
-#radiobanner
-{
-   float: left;
+#playpaybutton
+{      
+   position: fixed;   
+   left: 0;
+   margin-bottom: 1px;   
+   margin-left: 10px;
+   margin-top: 30px;
+   z-index: 3;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace; 
 }
 
-#lowerright
-{
-    position:fixed;
-    bottom:0;
-    right:0;
-    margin-bottom: 1px;
-    margin-right : 1px;
-    height: 30px;
-    width: 80px;
-    background-color: rgb(59, 58, 58);
-    display: table-cell;   
-    opacity: 0.5; 
-    border-radius:10px;
-	-webkit-border-radius:10px;
-	-moz-border-radius:10px;
+#pausebutton
+{      
+   position: fixed;   
+   left: 0;
+   margin-bottom: 1px;   
+   margin-left: 92px;
+   margin-top: 30px;
+   z-index: 3;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace;  
 }
 
+#volup
+{      
+   position: fixed;   
+   left: 0;
+   margin-bottom: 1px;   
+   margin-left: 174px;
+   margin-top: 30px;
+   z-index: 3;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace;  
+}
+
+#voldown
+{      
+   position: fixed;   
+   left: 0;
+   margin-bottom: 1px;   
+   margin-left: 256px;
+   margin-top: 30px;
+   z-index: 4;
+   height: 30px;
+   width: 80px;   
+   margin:0 0.3em 0.3em 0;
+   box-sizing: border-box;
+   color: black;
+   border: 2px solid #555555;
+   font-family:monospace;  
+}
 #innertext{
     text-align: center;
-    font-size: 15px;
-    color: #fff; 
+    font-size: 15px;     
     position : relative;
 	top : 50%;
 	transform : translateY(-50%);
@@ -217,6 +207,7 @@ body {
   padding: 20px;
   border: 1px solid #888;
   width: 30%;
+  font-family:monospace;
 }
 
 /* The Close Button */
@@ -233,3 +224,121 @@ body {
   text-decoration: none;
   cursor: pointer;
 }
+
+.bg {
+  animation:slide 3s ease-in-out infinite alternate;
+  background-image: linear-gradient(-60deg, #6c3 50%, #09f 50%);
+  bottom:0;
+  left:-50%;
+  opacity:.5;
+  position:fixed;
+  right:-50%;
+  top:0;
+  z-index:-1;
+}
+
+.bg2 {
+  animation-direction:alternate-reverse;
+  animation-duration:4s;
+}
+
+.bg3 {
+  animation-duration:5s;
+}
+
+@keyframes slide {
+  0% {
+    transform:translateX(-25%);
+  }
+  100% {
+    transform:translateX(25%);
+  }
+}
+
+#playpaybutton:hover {
+	background-color: #4289BE;  
+}
+
+#pausebutton:hover {
+	background-color: #4289BE;  
+}
+#history:hover {
+	background-color: #4289BE;  
+}
+#volup:hover {
+	background-color: #4289BE;  
+}
+#voldown:hover {
+	background-color: #4289BE;  
+}
+#about:hover {
+	background-color: #4289BE;  
+}
+#pausebutton:active {
+  background-color: #3C99AA;
+  
+}
+#playpaybutton:active {
+  background-color: #3C99AA;  
+}
+#about:active {
+  background-color: #3C99AA;
+  
+}
+#history:active {
+  background-color: #3C99AA;  
+}
+#volup:active {
+  background-color: #3C99AA;
+  
+}
+#voldown:active {
+  background-color: #3C99AA;  
+}
+
+input[type='checkbox'] { display: none; } 
+.lbl-toggle { 
+  display: block; 
+  font-weight: bold; 
+  font-family: monospace; 
+  text-align: left;   
+  cursor: pointer; 
+  border-radius: 7px; 
+  transition: all 0.25s ease-out; 
+}  
+.lbl-toggle::before { 
+  content: ' '; 
+  display: inline-block; 
+  border-top: 5px solid transparent;
+  border-bottom: 5px solid transparent; 
+  border-left: 5px solid currentColor; 
+  vertical-align: middle; 
+  margin-right: .7rem; 
+  transform: translateY(-2px); 
+  transition: transform .2s ease-out; 
+} 
+.toggle:checked+.lbl-toggle::before { 
+  transform: rotate(90deg) translateX(-3px);
+} 
+
+.collapsible-content { 
+  max-height: 0px; 
+  overflow: hidden; 
+  transition: max-height .25s ease-in-out; 
+} 
+
+.toggle:checked + .lbl-toggle + .collapsible-content { 
+  max-height: 350px;
+} 
+
+.toggle:checked+.lbl-toggle {
+  border-bottom-right-radius: 0; 
+  border-bottom-left-radius: 0; 
+} 
+.collapsible-content .content-inner {  
+  border-bottom-left-radius: 7px; 
+  border-bottom-right-radius: 7px; 
+  padding: .5rem 1rem; 
+} 
+.collapsible-content p { margin-bottom: 0; }
+
