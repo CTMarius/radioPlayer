@@ -138,6 +138,6 @@ function getStreamingData() {
         } 
     };
     
-    xhttp.open('GET', 'https://668dee490f14.ngrok.io/status-json.xsl', true);
+    xhttp.open('GET', 'https://a891512e1ccc.ngrok.io/status-json.xsl', true);
     xhttp.send();
 }
