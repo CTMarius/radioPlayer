@@ -215,6 +215,8 @@
 	border: 1px solid #888;
 	width: 30%;
 	font-family: monospace;
+	height: 55%;
+  	overflow-y: scroll;
 }
 
 
