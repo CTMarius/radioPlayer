@@ -1,4 +1,3 @@
-<!DOCTYPE html>
 <html>
 <head>
 <title>Radio Player</title>
@@ -6,62 +5,71 @@
 <script src="script.js"></script>
 </head>
 <body id="body">
-<div class="player" id="player">
-<audio controls autoplay preload="metadata" style=" width:300px; position:fixed; bottom:0; margin-bottom: 5px;">
-<source src="https://668dee490f14.ngrok.io/stream" type="audio/mpeg">
-Your browser does not support the audio element.
-</audio>
-</div>
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
-<script>
-	var timedelay = 1;
-	function delayCheck()
-	{
-	   if(timedelay == 5)
-	   {
-		   $('#player').fadeOut();
-		   timedelay = 1;
-	   }
-	   timedelay = timedelay+1;
-	}
-	$(document).mousemove(function() {
-		$('#player').fadeIn(); 
-		timedelay = 1;
-		clearInterval(_delay); 
-		_delay = setInterval(delayCheck, 3000);
-	});
-	_delay = setInterval(delayCheck, 500);
-</script>
-<div class="info-current-song">
+<div class="bg"></div>
+<div class="bg bg2"></div>
+<div class="bg bg3"></div>
+<div class="container">  
+  <div class="info-current-song">
 <h2 id="currentSong" class="info-current-song"></h2>
+</div>  
+<div class="player" id="player">
+<audio id="audio" src="https://a891512e1ccc.ngrok.io/stream" style=" width:300px; position:fixed; bottom:0; margin-bottom: 5px;" autoplay="true"></audio>
+<div> 
+  <div id="playpaybutton" onclick="var num = Math.floor(Math.random() * 10 + 1); randomstring = 'https://a891512e1ccc.ngrok.io/stream?nocache=' +num;
+document.getElementById('audio').src=randomstring; document.getElementById('audio').play()"><div id="innertext">Play</div> </div> 
+  <div id="pausebutton" onclick="document.getElementById('audio').pause()"><div id="innertext">Pause</div> </div> 
+  <div id="volup" onclick="document.getElementById('audio').volume += 0.1"><div id="innertext">Vol +</div> </div> 
+  <div id="voldown" onclick="document.getElementById('audio').volume -= 0.1"><div id="innertext">Vol -</div> </div> 
+  <div id="about"> <div id="innertext">About</div>
 </div>
-<div id="lowerleft"> <div id="innertext">About</div>
+    <div id="history"> <div id="innertext">History</div>
 </div>
+</div>
+</div>
+</div>   
 <div id="myModal" class="modal">
 <div class="modal-content">
 <span class="close">&times;</span>
-<div><h3 id="title">Wellcome to Old Polder Radio</h3></div>
+<div><h3 id="title">Welcome to Old Polder Radio</h3></div>
 <div id="artists"><h4>Artists:</h4></div>
-<div><strong>Sieur Bigorneau - </strong><a href="https://sieurbigorneau.bandcamp.com/">https://sieurbigorneau.bandcamp.com/</a></div>
-<div><strong>Reverboy </strong><a href="https://reverboy.bandcamp.com/">https://reverboy.bandcamp.com/</a></div>
-<div><strong>Montplaisir/Komiku - </strong><a href="https://chezmonplaisir.bandcamp.com/">https://chezmonplaisir.bandcamp.com/</a></div>
-<div><strong>Nathan Maingard - </strong><a href="https://natemaingard.bandcamp.com/">https://natemaingard.bandcamp.com/</a></div>
-<div><strong>Townhouse Woods - </strong><a href="https://townhousewoods.bandcamp.com/">https://townhousewoods.bandcamp.com/</a></div>
-<div><strong>Goodbye Meteor - </strong><a href="https://goodbyemeteor.bandcamp.com/releases">https://goodbyemeteor.bandcamp.com/releases</a></div>
-<div><strong>Rosedale Bluesband - </strong><a href="https://frontl.ink/2knv6oe">https://frontl.ink/2knv6oe</a></div>
-<div><h4>Licensing:</h4></div>
-<div id="license">All the songs in this stream fall into the Creative Commons <a href="https://creativecommons.org/licenses/">license.</a></div>
-<div>Background photo credit: <a href="https://www.europeana.eu/">Europeana</a></div>
+<div><strong>Sieur Bigorneau - </strong><a href="https://sieurbigorneau.bandcamp.com/" target="_blank">https://sieurbigorneau.bandcamp.com</a></div>
+<div><strong>Reverboy </strong><a href="https://reverboy.bandcamp.com/" target="_blank">https://reverboy.bandcamp.com</a></div>
+<div><strong>Montplaisir/Komiku - </strong><a href="https://chezmonplaisir.bandcamp.com/" target="_blank">https://chezmonplaisir.bandcamp.com</a></div>
+<div><strong>Nathan Maingard - </strong><a href="https://natemaingard.bandcamp.com/" target="_blank">https://natemaingard.bandcamp.com</a></div>
+<div><strong>Townhouse Woods - </strong><a href="https://townhousewoods.bandcamp.com/" target="_blank">https://townhousewoods.bandcamp.com</a></div>
+<div><strong>Goodbye Meteor - </strong><a href="https://goodbyemeteor.bandcamp.com/releases" target="_blank">https://goodbyemeteor.bandcamp.com</a></div>
+<div><strong>Rosedale Bluesband - </strong><a href="https://frontl.ink/2knv6oe" target="_blank">https://frontl.ink/2knv6oe</a></div>
+<div><strong>Matt Stevens - </strong><a href="https://mattstevens.bandcamp.com" target="_blank">https://mattstevens.bandcamp.com</a></div>
+<div><strong>Broken Cities - </strong><a href="https://music.brokencities.com" target="_blank">https://music.brokencities.com</a></div>
+<div><strong>Osiris Saline - </strong><a href="https://osirissaline.bandcamp.com" target="_blank">https://osirissaline.bandcamp.com</a></div>
+<div><strong>The Blue Stones - </strong><a href="https://thebluestones.bandcamp.com" target="_blank">https://thebluestones.bandcamp.com</a></div>
+<div><strong>Seba Lay - </strong><a href="https://thebluestones.bandcamp.com" target="_blank">https://sebalay.com</a></div>
 <div><h4></h4></div>
-<div><strong>This station is using: </strong><a href="https://icecast.org/">Icecast 2.4.4</a> and <a href="https://icecast.org/ezstream/"> Ezstream 0.6.0</a></div>
+<div><strong>Favicon & quality assurance: </strong>Vali</div>
 <div><h4></h4></div>
-<div id="contact"><strong>Contact email: </strong><a href="oldpolderradio@gmail.com"><span class="__cf_email__" data-cfemail="e38c8f87938c8f8786919182878a8ca3848e828a8fcd808c8e">[email&#160;protected]</span></a></div>
-<div><p id="currentListeners"></p></div>
+<div><strong>Animation Copyright: </strong><a href="https://codepen.io/chris22smith/pen/RZogMa" target="_blank">Chris Smith</a></div>
+<div><h4></h4></div>
+<div id="license" class="wrap-collabsible"><input id="collapsible2" class="toggle" type="checkbox" > <label for="collapsible2" class="lbl-toggle">Licensing Info</label><div class="collapsible-content"><div class="content-inner">
+<p><strong>Music:</strong> All the songs in this stream fall into the <a href="https://creativecommons.org/licenses/" target="_blank">Creative Commons license agreement</a> and are streamed with the artists permission.</p>
+<p><strong>Design: </strong>Copyright (c) 2021 by Chris Smith (https://codepen.io/chris22smith/pen/RZogMa)
+</p>
+<p>
+Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
+The above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.</p></div></div></div>
+<div><h4></h4></div>
+<div><strong>This station is using: </strong><a href="https://icecast.org/" target="_blank">Icecast 2.4.4</a> , <a href="https://icecast.org/ezstream/" target="_blank"> Ezstream 0.6.0</a> and <a href="https://ngrok.com/" target="_blank">ngrok</a></div>
+<div><h4></h4></div>
+<div id="contact"><strong>Contact email: </strong><a href="mailto:oldpolderradio@gmail.com" target="_blank" rel="noopener noreferrer">oldpolderradio@gmail.com</a></div>
+<div><p id="currentListeners" style="font-weight:bold;"></p></div>
+<div><h4></h4></div>
+<p><strong>Enjoy!</strong></p>
 </div>
 </div>
-<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script><script>
+<script data-cfasync="false" src="/cdn-cgi/scripts/5c5dd728/cloudflare-static/email-decode.min.js"></script>
+  
+<script>
 var modal = document.getElementById("myModal");
-var btn = document.getElementById("lowerleft");
+var btn = document.getElementById("about");
 var span = document.getElementsByClassName("close")[0];
 btn.onclick = function() {
   modal.style.display = "block";
@@ -75,8 +83,7 @@ window.onclick = function(event) {
   }
 }
 </script>
-<div id="lowerright"> <div id="innertext">History</div>
-</div>
+
 <div id="historyModal" class="modal">
 <div class="modal-content">
 <span class="close">&times;</span>
@@ -86,7 +93,7 @@ window.onclick = function(event) {
 </div>
 <script>
 var modal2 = document.getElementById("historyModal");
-var btn2 = document.getElementById("lowerright");
+var btn2 = document.getElementById("history");
 var span2 = document.getElementsByClassName("close")[1];
 btn2.onclick = function() {
   modal2.style.display = "block";
@@ -95,5 +102,6 @@ span2.onclick = function() {
   modal2.style.display = "none";
 }
 </script>
+    
 </body>
 </html>
