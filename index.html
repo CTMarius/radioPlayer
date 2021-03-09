@@ -13,9 +13,9 @@
             <h2 id="currentSong" class="info-current-song"></h2>
          </div>
          <div class="player" id="player">
-            <audio id="audio" src="https://exampleurl.com/stream" style=" width:300px; position:fixed; bottom:0; margin-bottom: 5px;" autoplay="true"></audio>
+            <audio id="audio" src="https://exampleurl-icecastserver.com/stream" style=" width:300px; position:fixed; bottom:0; margin-bottom: 5px;" autoplay="true"></audio>
             <div>
-               <div id="playpaybutton" onclick="var num = Math.floor(Math.random() * 10 + 1); randomstring = 'https://a891512e1ccc.ngrok.io/stream?nocache=' +num;
+               <div id="playpaybutton" onclick="var num = Math.floor(Math.random() * 10 + 1); randomstring = 'https://exampleurl-icecastserver.com/stream?nocache=' + num;
                   document.getElementById('audio').src=randomstring; document.getElementById('audio').play()">
                   <div id="innertext">Play</div>
                </div>
