@@ -139,6 +139,6 @@ function getStreamingData() {
 		}
 	};
 
-	xhttp.open('GET', 'https://a891512e1ccc.ngrok.io/status-json.xsl', true);
+	xhttp.open('GET', 'https://exampleurl-icecastserver.com/status-json.xsl', true);
 	xhttp.send();
 }
