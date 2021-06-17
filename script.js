@@ -1,5 +1,3 @@
-//run(100000, 15);
-
 window.onload = function () {
 	storeFirstSong();
 	getStreamingData();
