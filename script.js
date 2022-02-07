@@ -21,7 +21,7 @@ function run(interval, frames) {
 	var swap = window.setInterval(func, interval);
 }
 
-function Updatelist(song) {
+function updatelist(song) {
 	var ul = document.getElementById("songlist");
 	var li = ul.getElementsByTagName("li");
 	var lastLi = li[li.length - 1];
@@ -53,7 +53,7 @@ function storeFirstSong() {
 
 }
 
-function Page() {
+function page() {
 	this.refreshCurrentSong = function (song, visitors) {
 		var currentSong = document.getElementById('currentSong');
 		var currentVisitsElement = document.getElementById('currentListeners');
